@@ -53,7 +53,6 @@ data.item: "version" "110";
 //
 
 collections {
-    base_scale: 2.4;
 
 #include "widgets_default/map.edc"
 //#include "widgets_default/multisense_ui.edc"
