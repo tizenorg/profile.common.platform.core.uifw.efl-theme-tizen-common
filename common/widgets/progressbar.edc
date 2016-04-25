@@ -28,6 +28,7 @@
    group { name: "elm/progressbar/horizontal/default";
       data.item: "vector_ux" "default";
       parts {
+         alias: "elm.text" "elm.text.top.right";
          part { name: "access";
             type: RECT;
             description { state: "default" 0.0;
@@ -305,6 +306,18 @@
          }
       }
       programs {
+         program { name: "text_show";
+            signal: "elm,state,text,visible";
+            source: "elm";
+            action: STATE_SET "show" 0.0;
+            target: "elm.text";
+         }
+         program { name: "text_hide";
+            signal: "elm,state,text,hidden";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.text";
+         }
          program { name: "text_top_right_show";
             signal: "elm,state,top.right,visible";
             source: "elm";
@@ -449,6 +462,7 @@
          }
       }
       parts {
+         alias: "elm.text" "elm.text.top.right";
          part { name: "access";
             type: RECT;
             description { state: "default" 0.0;
@@ -625,6 +639,18 @@
          }
       }
       programs {
+         program { name: "text_show";
+            signal: "elm,state,text,visible";
+            source: "elm";
+            action: STATE_SET "show" 0.0;
+            target: "elm.text";
+         }
+         program { name: "text_hide";
+            signal: "elm,state,text,hidden";
+            source: "elm";
+            action: STATE_SET "default" 0.0;
+            target: "elm.text";
+         }
          program { name: "text_top_right_show";
             signal: "elm,state,top.right,visible";
             source: "elm";
