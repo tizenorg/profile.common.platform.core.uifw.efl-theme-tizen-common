@@ -51,6 +51,7 @@ data.item: "version" "110";
 //
 
 collections {
+   base_scale: BASE_SCALE_INC;
    plugins {
       plugin {
          name: "touch_sound";
